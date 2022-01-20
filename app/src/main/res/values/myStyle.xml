@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="main_button">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:background">@drawable/bg_btn_main</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+</resources>
