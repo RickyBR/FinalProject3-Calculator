@@ -6,16 +6,13 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 public class MainActivity extends AppCompatActivity {
     TextView value,hasil;
-    String isi="",tempFormula,formula;
-    int val;
+    String isi="";
     AppCompatButton btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9;
     AppCompatButton btn_add,btn_min,btn_del,btn_clear,btn_times,btn_div,btn_dot,btn_equal,btn_mod,btn_c;
     @Override
