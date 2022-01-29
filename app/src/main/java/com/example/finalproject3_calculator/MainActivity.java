@@ -71,21 +71,26 @@ public class MainActivity extends AppCompatActivity {
         btn_mod.setOnClickListener(view -> updateDisplay("%"));
 
         btn_equal.setOnClickListener(view -> {
+            if(isi != null && !isi .isEmpty()) {
                 Double result = null;
 
-                isi = isi.replaceAll("x","*");
-                isi = isi.replaceAll("%","/100");
+                isi = isi.replaceAll("x", "*");
+                isi = isi.replaceAll("%", "/100");
 
                 ScriptEngine engine = new ScriptEngineManager().getEngineByName("rhino");
                 try {
                     result = (double) engine.eval(isi);
-                }catch (ScriptException e){
-                    Toast.makeText(MainActivity.this,"Invalid Input",Toast.LENGTH_SHORT).show();
+                } catch (ScriptException e) {
+                    Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_SHORT).show();
                 }
-                if(result!=null){
+                if (result != null) {
                     hasil.setText(String.valueOf(result.doubleValue()));
                 }
             }
+            else{
+                Toast.makeText(MainActivity.this, "Empty Command", Toast.LENGTH_SHORT).show();
+            }
+        }
         );
 
         btn_del.setOnClickListener(view -> {
